@@ -19,6 +19,7 @@ public class SpringBoot2Ch1ApplicationTests {
 
     @Test
     public void vodPropertiesTest() {
+        log.info("### vod setting - {}", vodSetting);
         then(vodSetting.getHost()).isEqualToIgnoringCase("localhost");
         then(vodSetting.getPort()).isEqualToIgnoringCase("8888");
         then(vodSetting.getTimeout()).isNotZero();
