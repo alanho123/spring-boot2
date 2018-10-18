@@ -3,7 +3,7 @@ package com.example.vodconfigclient;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  * @author <a href="mailto:alanho123@gmail.com">Jason Ho</a>
@@ -11,12 +11,11 @@ import org.springframework.beans.factory.annotation.Value;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ConfigurationProperties(prefix = "streaming.cdn")
 public class VodConfig {
 
-    @Value("${streaming.cdn.provider}")
     private String provider;
 
-    @Value("${streaming.cdn.endpoint}")
     private String endpoint;
 
 }

@@ -1,6 +1,12 @@
 spring:
   application:
+    # 要跟github上的檔名一致
     name: vod-config
   cloud:
     config:
       uri: http://localhost:8888
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
